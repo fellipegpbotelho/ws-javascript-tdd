@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Escopo</title>
+</head>
+<body>
+  <script>
+    function sayAnimal() {
+      /* A variável animal foi definida dentro do escopo da função sayAnimal(), dessa forma ele pertence a este escopo, ou seja é um escopo de bloco cercado por {  } */
+      var animal = "cat";
+      console.log(animal);
+    }
+
+    sayAnimal();
+    console.log(animal);
+
+    let sound = "meow";
+    const name = "jake";
+  </script>
+</body>
+</html>
