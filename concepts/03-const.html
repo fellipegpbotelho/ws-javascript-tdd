@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Const</title>
+</head>
+<body>
+  <script>
+    const secretNumber = 21;
+
+    const lipe = {
+      name: 'Fellipe',
+      age: 90,
+    };
+
+    console.log(lipe);
+
+    /* Uma variável declarada com const não pode ser alterada (re-atribuida), porém as propriedades de um objeto declarado com const podem ser alterados. const não é imutável. */
+    /* Para tornar um objeto imutável pode ser utilizado Object.freeze(object) */
+    lipe.age = 21;
+
+    console.log(lipe);
+
+
+  </script>
+</body>
+</html>
