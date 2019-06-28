@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrow functions 3</title>
+</head>
+<body>
+  <button id="btn">Make My Sandwich!</button>
+  <script>
+    const sandwich = {
+      bread: "white",
+      cheese: "cheddar",
+      prepare: function() {
+        return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese!`;
+      },
+      make: function() {
+        /*
+         * Ao utilizar uma function declaration o this dentro de window.setTimeout se refere a window. Assim é necessário se utilizar do recurso var that = this e utilizar o that dentro do setTimeout para acessar as propriedades do objeto sandwich.
+          var that = this;
+          window.setTimeout(function() {
+            console.log(that.prepare())
+          }, 500);
+         * Com a arrow function o this se refere diretamente ao objeto sandwich e não ao objeto window.
+         */
+        window.setTimeout(() => {
+          console.log(this.prepare())
+        }, 500);
+      },
+    };
+
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function() {
+      sandwich.make();
+    });
+  </script>
+</body>
+</html>
