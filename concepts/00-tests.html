@@ -4,19 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Let</title>
+  <title>Tests</title>
 </head>
 <body>
   <script>
-    console.log(animal);
-    var animal = "cat";
-    console.log(animal);
-    {
-      /* A variável com let fica presa dentro do escopo em que está. */
-      let animal = "dog";
-      console.log(animal);
+    for (let i = 0; i <= 2; i++) {
+      console.log("local ->", i);
     }
-    console.log(animal);
+    console.log("global ->", i);
   </script>
 </body>
 </html>
