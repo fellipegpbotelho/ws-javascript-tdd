@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template literals para html</title>
+</head>
+<body>
+  <script>
+    const article = {
+      title: "Aprendendo template string",
+      intro: "Uma breve explicação sobre template string",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sequi impedit perferendis maiores fugiat rerum in magni voluptatem rem quo eaque reiciendis suscipit ab architecto consequuntur, libero id, animi dicta!",
+      tags: ["es6", "js", "template-literal", "strings"],
+      author: "Fellipe Botelho",
+    };
+
+    function renderAuthor(name) {
+      return name ? name : 'unknown';
+    }
+
+    const markup = `
+      <article>
+        <header>
+          <h1>${article.title}</h1>
+        </header>
+        <section>
+          <p>${article.intro}</p>
+        </section>
+        <footer>
+          <ul>
+            ${article.tags.map(tag => `<li>${tag}</li>`).join("")}
+          </ul>
+          <p>Por: ${renderAuthor(article.author)}</p>
+        </footer>
+      </article>
+    `;
+
+    document.body.innerHTML = markup;
+  </script>
+</body>
+</html>
