@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>array.find()</title>
+</head>
+<body>
+  <script>
+    const data = [
+      {
+        name: "Fellipe",
+        age: 21,
+        city: "Montes Claros",
+      },
+      {
+        name: "Alan Moore",
+        age: 65,
+        city: "Northampton"
+      }
+    ];
+
+    const lipe = data.find(person => person.name === "Fellipe");
+    console.log(lipe);
+
+    const sampleArray = [4, -5, 0];
+
+    /* Retorna o primeiro elemento que satisfaça a condição. Diferente do filter. */
+    const underZero = sampleArray.find(x => x < 0);
+    console.log(underZero);
+
+    /* Mesmo funcionamento do find, no entanto retorna o indice. */
+    const underZeroIndex = sampleArray.findIndex(x => x < 0);
+    console.log(underZeroIndex);
+  </script>
+</body>
+</html>
