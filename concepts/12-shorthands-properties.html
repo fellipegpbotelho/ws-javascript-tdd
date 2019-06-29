@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shorthand properties</title>
+</head>
+<body>
+  <script>
+    let firstName = "Fellipe";
+    let surname = "Botelho";
+    let age = 26;
+
+    const person = {
+      firstName,
+      surname,
+      age,
+      printName() {
+        console.log(`${this.firstName} ${this.surname}`);
+      },
+    };
+
+    console.log(person);
+
+    person.printName();
+  </script>
+</body>
+</html>
