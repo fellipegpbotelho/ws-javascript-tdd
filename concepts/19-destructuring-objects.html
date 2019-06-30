@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring Objects</title>
+</head>
+<body>
+  <script>
+    const data = {
+      name: "Fellipe",
+      surname: "Botelho",
+      age: 21,
+      city: "Montes Claros - MG - Brasil",
+      social: {
+        twitter: "@flpgpbotelho",
+        facebook: "/fellipegpbotelho"
+      },
+    };
+
+    /* Criando as variáveis. */
+    const { name, surname, social: { twitter, facebook } } = data;
+    console.log(name, surname, twitter, facebook);
+
+    /* Renomeando. */
+    const { facebook: fb } = data.social;
+    console.log(fb);
+
+    /* Atribuindo valores default. */
+    const { city = "Montes Claros" } = data;
+    console.log(city);
+  </script>
+</body>
+</html>
