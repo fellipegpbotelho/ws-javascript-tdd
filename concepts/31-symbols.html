@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Symbols</title>
+</head>
+<body>
+  <script>
+    /* Tipo primitido imutável e único. */
+    const foo = Symbol("name");
+    const bar = Symbol("name");
+
+    /* Resulta em false pois todo Symbol é ÚNICO. */
+    console.log(foo === bar);
+
+    /* Utilizando Symbols como chaves de um objeto. */
+    const object = {
+      [Symbol("name")]: "Fellipe",
+      [Symbol("age")]: 21,
+      city: "Montes Claros",
+    };
+
+    console.log(object);
+    /* Não considera que os Symbols são atributos do objeto. */
+    console.log(Object.keys(object));
+    /* Retorn os Symbols que são propriedades do objeto. */
+    const symbols = Object.getOwnPropertySymbols(object);
+
+    const data = symbols.map(symbol => object[symbol]);
+    console.log(data);
+
+    /* Pode ser usado quando é desejado que uma propriedade seja sempre única. */
+  </script>
+</body>
+</html>

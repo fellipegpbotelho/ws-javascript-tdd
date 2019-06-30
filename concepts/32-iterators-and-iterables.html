@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Iterators and Iterables</title>
+</head>
+<body>
+  <script>
+    /* Iterables são elementos que permite iteração. */
+    const textIterable = "Ireland";
+    const iterator = textIterable[Symbol.iterator]();
+
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+
+    for (letter of textIterable) {
+      console.log(letter);
+      if (letter === "a") {
+        break;
+      }
+    }
+  </script>
+</body>
+</html>

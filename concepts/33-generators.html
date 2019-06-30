@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Generators</title>
+</head>
+<body>
+  <script>
+    function* getNames() {
+      yield "Fellipe";
+      yield "Alfredo";
+      yield "Ingrid";
+    }
+
+    const names = getNames();
+
+    console.log(names);
+
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next());
+  </script>
+</body>
+</html>
