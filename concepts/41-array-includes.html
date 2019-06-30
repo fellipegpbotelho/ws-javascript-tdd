@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array includes</title>
+</head>
+<body>
+  <script>
+    /* Verificar se existe um item em um array. */
+    const array = [1, 2, 3];
+
+    /* Forma antiga */
+    console.log(array.indexOf(3) > -1); // true
+    console.log(array.indexOf(5) > -1); // false
+
+    /* Com Array includes */
+    console.log(array.includes(3)); // true
+    console.log(array.includes(5)); // false
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object values</title>
+</head>
+<body>
+  <script>
+    const animals = {
+      camel: 3,
+      llama: 2,
+      alpaca: 5,
+    };
+
+    const values = Object.values(animals);
+    console.log(values); // [3, 2, 5]
+
+    const quantityAnimals = values.reduce((a, b) => a + b);
+    console.log(quantityAnimals); // 10
+  </script>
+</body>
+</html>
