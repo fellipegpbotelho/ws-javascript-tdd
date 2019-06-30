@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Spread operator</title>
+</head>
+<body>
+  <script>
+    const front = ["react", "vue", "angular"];
+    const back = ["python", "ruby", "nodejs"];
+
+    /* Cocatenando sem spread. */
+    const fullstack = front.concat(back);
+
+    /* Cocatenando com spread. */
+    const fullstackSpread = [...front, "RxJS", ...back];
+    console.log(fullstackSpread);
+
+    console.log([..."lipe"]);
+  </script>
+</body>
+</html>

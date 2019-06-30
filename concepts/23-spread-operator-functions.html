@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Spread operator in functions</title>
+</head>
+<body>
+  <script>
+    function makeSandwich(bread, cheese, sauce) {
+      console.log(`Your sandwich with ${bread} bread, ${cheese} cheese and ${sauce} is done!`);
+    }
+
+    const ingredients = ["white", "cheddar", "barbecue"];
+
+    makeSandwich(...ingredients);
+  </script>
+</body>
+</html>

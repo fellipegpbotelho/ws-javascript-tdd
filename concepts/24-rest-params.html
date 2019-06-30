@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Rest params</title>
+</head>
+<body>
+  <script>
+    function multiply(mult, ...args) {
+      return args.map(arg => arg * mult);
+    }
+
+    console.log(multiply(4, 1, 2, 6, 12, 6));
+  </script>
+</body>
+</html>
