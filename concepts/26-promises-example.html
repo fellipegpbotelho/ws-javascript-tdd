@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise example</title>
+</head>
+<body>
+  <script>
+    const posts = fetch("https://willianjusten.com.br/search.json");
+
+    /* Promise status: pending, resolved and rejected. */
+
+    posts
+      .then(data => data.json())
+      .then(data => data.map(post => console.log(post.title)))
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>

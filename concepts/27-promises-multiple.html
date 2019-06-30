@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise multiple</title>
+</head>
+<body>
+  <script>
+    const currency = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ currency: "euro", value: 3.50 });
+      }, 2000);
+    });
+
+    const countries = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(["Ireland", "England", "Scotland"]);
+      }, 600);
+    });
+
+    /* Resolve as respostas no tempo da promise de maior tempo. */
+    Promise
+      .all([currency, countries])
+      .then(responses => console.log(responses));
+
+    /* Quando a primeira promise for resolvida o resto é ignorado. */
+    Promise
+      .race([currency, countries])
+      .then(responses => console.log(responses));
+  </script>
+</body>
+</html>
