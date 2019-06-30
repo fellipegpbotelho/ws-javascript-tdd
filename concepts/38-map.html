@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Map</title>
+</head>
+<body>
+  <script>
+    /* Semelhante ao Set, no entanto define chave valor. */
+    const map = new Map();
+
+    map.set("Fellipe", 21);
+    map.set("Alfredo", 4);
+    map.set("Ingrid", 22);
+
+    map.delete("Alfredo");
+
+    console.log(map.has("Fellipe")); // true
+    console.log(map.has("Alfredo")); // false
+
+    /* É um iterator. */
+    const iterator = map.values();
+    console.log(iterator.next());
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>WeakMap</title>
+</head>
+<body>
+  <script>
+    /* Só aceita objetos. */
+    let object1 = {
+      name: "Fellipe",
+      age: 21,
+    };
+
+    const object2 = {
+      name: "Alfredo",
+      age: 4,
+    };
+
+    const weakMap = new WeakMap();
+
+    weakMap.set(object1, "Info de lipe");
+    weakMap.set(object2, "Info de fredo");
+
+    /* Ao deletar o objeto o weak map perde a referência. */
+    object1 = null;
+  </script>
+</body>
+</html>

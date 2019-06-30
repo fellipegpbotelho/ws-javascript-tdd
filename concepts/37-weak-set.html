@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>WeakSet</title>
+</head>
+<body>
+  <script>
+    const object1 = {
+      name: "Fellipe",
+      age: 21,
+    };
+
+    const object2 = {
+      name: "Alfredo",
+      age: 4,
+    };
+
+    /* Contém as mesmas propriedades do Set, no entanto só aceita objetos e não é um Iterator. */
+    const weakSet = new WeakSet([object1, object2]);
+
+    weakSet.add({ name: "Ingrid", age: 22 });
+    weakSet.delete(object2);
+  </script>
+</body>
+</html>

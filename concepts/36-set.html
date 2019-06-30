@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Set</title>
+</head>
+<body>
+  <script>
+    /* É um objeto que permite guardar valores únicos de um tipo. */
+    const mySet = new Set(["Fellipe", "Geraldo", "Pereira", "Botelho"]);
+
+    /* Adiciona somente um, visto que é o mesmo valor. */
+    mySet.add("Alfredo");
+    mySet.add("Alfredo");
+    mySet.add("Alfredo");
+
+    mySet.delete("Alfredo");
+
+    console.log(mySet.has("Geraldo"));
+    console.log(mySet.has("Alfredo"));
+
+    /* É um iterator. */
+    const iterator = mySet.values();
+    // console.log(iterator.next());
+
+    for (name of iterator) {
+      console.log(name);
+    }
+  </script>
+</body>
+</html>
